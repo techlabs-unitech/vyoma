@@ -7,7 +7,7 @@ const art: PathwayKind[] = ["ug", "exam", "tech", "voc", "pro", "school", "puc"]
 export default function Services() {
   return (
     <main>
-      <PageHero title="Services" long lead="Vyoma Eduventures LLP offers integrated education solutions spanning academic partnerships, professional learning, skill development, institutional consulting, faculty development and education projects. We work with educational institutions, learners and industry partners to create meaningful opportunities for academic growth, professional development and institutional advancement." />
+      <PageHero title="Services" long lead="“Vyoma offers integrated education solutions across academic partnerships, professional learning, skill development, institutional consulting, faculty development and education projects. We collaborate with educational institutions, learners and industry partners to create opportunities for academic growth, professional advancement and institutional development.”" />
       {services.map((s, i) => (
         <section key={s.id} id={s.id} className={`section ${i % 2 ? "alt" : ""}`}><div className={`wrap svc ${i % 2 ? "flip" : ""}`}>
           <div className="svc-text">
