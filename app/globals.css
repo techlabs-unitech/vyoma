@@ -361,7 +361,19 @@ h2::before { content: ""; display: block; width: 44px; height: 4px; border-radiu
 .fgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
 .fcard { position: relative; display: block; aspect-ratio: 4 / 5; border-radius: 16px; overflow: hidden; text-decoration: none; background: var(--navy); border: 1px solid var(--line); box-shadow: var(--shadow); transition: transform .2s, box-shadow .2s, border-color .2s; }
 .fcard:hover, .fcard:focus-visible { transform: translateY(-4px); border-color: var(--blue); box-shadow: 0 16px 40px var(--glow); }
-.fcard img { object-fit: cover; }
+.fcard img {
+  object-fit: cover;
+}
+
+/* Skillpreneur Academy - centre both students */
+.fcard[href="#skillpreneur-academy"] img {
+  object-position: 34% center;
+}
+
+/* Faculty Development - centre the trainer */
+.fcard[href="#faculty"] img {
+  object-position: 68% center;
+}
 .fover { position: absolute; inset: auto 0 0 0; display: flex; gap: 12px; align-items: center; padding: 56px 16px 16px; background: linear-gradient(180deg, rgba(5,13,43,0) 0%, rgba(5,13,43,.88) 45%, rgba(5,13,43,.96) 100%); color: #fff; }
 .fico { flex: none; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #4d94ff; color: #8fb8ff; background: rgba(10,26,74,.7); }
 .ftxt { display: grid; gap: 2px; line-height: 1.25; }
