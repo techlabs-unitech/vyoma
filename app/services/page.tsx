@@ -12,6 +12,10 @@ const featured = [
   { id: "faculty", title: "Faculty Development & Training", line: "Equip, enable, empower", img: "faculty-development", icon: "users", alt: "A trainer presenting to a group of educators" },
 ];
 const photos: Record<string, { src: string; alt: string }> = {
+  "institutional-consulting": {
+  src: "/images/about/mentorship-and-growth.jpg",
+  alt: "Education professionals discussing institutional development",
+},
   "academic-partnerships": { src: "/images/services/academic-partnerships.jpg", alt: "Faculty and students collaborating around a laptop" },
   "ai-cybersecurity": { src: "/images/services/ai-cybersecurity.jpg", alt: "A student working on a laptop with AI and security icons" },
   "skillpreneur-academy": { src: "/images/services/skillpreneur-academy.jpg", alt: "Students working on a hands-on practical project" },
