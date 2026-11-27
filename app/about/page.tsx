@@ -19,7 +19,7 @@ export default function About() {
       <section className="section about-collage-sec" aria-label="Learning, mentorship and possibility"><div className="wrap">
         <div className="collage">
           <figure className="cl cl-top"><Image src="/images/about/learning-beyond-boundaries.jpg" alt="Students and a young mentor learning together around a laptop" fill sizes="(max-width: 860px) 100vw, 1072px" priority /><figcaption>Learning Beyond Boundaries</figcaption></figure>
-          <figure className="cl"><Image src="/images/about/mentorship-and-growth.jpg" alt="The founder in a mentoring discussion with students" fill sizes="(max-width: 860px) 100vw, 530px" style={{ objectPosition: "50% 30%" }} /><figcaption>Mentorship &amp; Growth</figcaption></figure>
+          <figure className="cl"><Image src="/images/about/mentorship-new.png" alt="The founder in a mentoring discussion with students" fill sizes="(max-width: 860px) 100vw, 530px" style={{ objectPosition: "50% 30%" }} /><figcaption>Mentorship &amp; Growth</figcaption></figure>
           <figure className="cl"><Image src="/images/about/vyomas-universe.jpg" alt="A glowing globe above an open book, encircled by an orbital ring, representing 360-degree learning and limitless possibilities" fill sizes="(max-width: 860px) 100vw, 530px" /><figcaption>Vyoma&rsquo;s Universe</figcaption></figure>
         </div>
       </div></section>
