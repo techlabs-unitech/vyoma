@@ -37,7 +37,15 @@ const features = [
 export default function LearningConnect() {
   return (
     <main>
-      <PageHero title="Learning Connect" lead="Find learning options in one clear, organised place, whether you are a student or a parent." />
+      <PageHero
+  title="Learning Connect"
+  lead="Find learning options in one clear, organised place, whether you are a student or a parent."
+  image={{
+    src: "/images/home-learning.jpg",
+    alt: "Students exploring learning opportunities",
+    position: "center",
+  }}
+/>
 
       <section className="section" id="pathways"><div className="wrap">
         <h2>Browse by Pathway</h2>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Block, PageHero, List, Note } from "../components";
 import Link from "next/link";
 export const metadata = { title: "Talent Connect | Vyoma", description: "Vyoma Talent Connect is a proposed pilot directory showcasing student skills and projects to verified institutions and approved talent seekers." };
@@ -5,10 +6,45 @@ export default function TalentConnect() {
   return (
     <main>
       <PageHero title="Talent Connect" lead="A proposed pilot talent directory for school, college and university students." image={{ src: "/images/services/skillpreneur-academy.jpg", alt: "Students working together on a hands-on practical project" }} />
-      <Block narrow>
-        <p className="body">Vyoma Talent Connect is planned to showcase student skills, projects, achievements, portfolios and interests, and to help connect them with legitimate opportunities. Access is for verified institutions and approved talent seekers.</p>
-        <Note>Pilot status: the operating model is being finalised. Register your interest and we will keep you informed.</Note>
-      </Block>
+      
+<section className="section">
+  <div className="wrap split">
+    <div>
+      <h2>Discover Talent and Opportunities</h2>
+
+      <p className="body">
+        Vyoma Talent Connect is planned to showcase
+        student skills, projects, achievements,
+        portfolios and interests, and to help connect
+        them with legitimate opportunities. Access is
+        for verified institutions and approved talent
+        seekers.
+      </p>
+
+      <div className="design-info-panel">
+        <Note>
+          Pilot status: the operating model is being
+          finalised. Register your interest and we
+          will keep you informed.
+        </Note>
+      </div>
+    </div>
+
+    <div className="split-art">
+      <Image
+        src="/images/home-learning.jpg"
+        alt="Students collaborating on a learning project"
+        fill
+        sizes="(max-width: 860px) 100vw, 40vw"
+        style={{
+          objectFit: "cover",
+          objectPosition: "center",
+        }}
+      />
+    </div>
+  </div>
+</section>
+
       <Block title="Safeguards" alt narrow>
         <List items={["Clear consent and control over profile visibility", "Verification of institutions and talent seekers", "Defined data retention, reporting and removal processes", "Parent or guardian consent and additional safeguards for minors", "Access limited to approved talent seekers; sensitive personal data is never shown publicly"]} />
         <p><strong>Listing does not guarantee internships, jobs, selection or placement.</strong></p>

@@ -415,3 +415,363 @@ h2::before { content: ""; display: block; width: 44px; height: 4px; border-radiu
 .split-art img { object-fit: cover; }
 .page-hero .hero-split { grid-template-columns: 1.1fr .9fr; }
 @media (max-width: 860px) { .page-hero .hero-split { grid-template-columns: 1fr; gap: 28px; } }
+
+/* ==========================================
+   VYOMA WEBSITE DESIGN ENHANCEMENTS
+   Original colour theme preserved
+   ========================================== */
+
+
+/* 1. PHOTOGRAPH CONTAINERS */
+
+.visual-photo {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.visual-photo img {
+  display: block;
+  object-fit: cover;
+}
+
+.pimg {
+  overflow: hidden;
+}
+
+.pimg .visual-photo {
+  position: absolute;
+  inset: 0;
+  aspect-ratio: auto;
+}
+
+.pnum {
+  z-index: 2;
+}
+
+.split-art .visual-photo,
+.help-art .visual-photo,
+.svc-art .visual-photo {
+  position: absolute;
+  inset: 0;
+  aspect-ratio: auto;
+}
+
+.split-art,
+.help-art,
+.svc-art {
+  position: relative;
+}
+
+.hero-art .visual-photo {
+  aspect-ratio: 3 / 2;
+  border-radius: 16px;
+}
+
+
+/* 2. SECTION DIVIDERS */
+
+main > .section + .section {
+  border-top: 1px solid var(--line);
+}
+
+main > .section {
+  position: relative;
+}
+
+
+/* 3. IMPROVED CONTENT CARDS */
+
+.card,
+.path,
+.help,
+.pcard,
+.ccard {
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  min-width: 0;
+}
+
+.card,
+.path,
+.help {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.card h3,
+.path h3,
+.help h3 {
+  margin-top: 0;
+  line-height: 1.4;
+}
+
+.card p,
+.path p,
+.help p {
+  line-height: 1.7;
+  overflow-wrap: break-word;
+}
+
+.card .help-ico,
+.help .help-ico {
+  margin-bottom: 12px;
+}
+
+
+/* 4. CARD GRID ALIGNMENT */
+
+.grid {
+  gap: 24px;
+  align-items: stretch;
+}
+
+.grid > .card,
+.grid > .path {
+  height: 100%;
+}
+
+.path {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.path .btn {
+  margin-top: auto;
+}
+
+.path p {
+  margin-bottom: 24px;
+}
+
+
+/* 5. LEARNING PATHWAY CARDS */
+
+.pgrid {
+  gap: 24px;
+}
+
+.pcard {
+  flex-basis: calc((100% - 48px) / 3);
+}
+
+.pbody {
+  padding: 22px;
+  gap: 12px;
+}
+
+.pbody h3 {
+  line-height: 1.4;
+}
+
+.pbody p {
+  line-height: 1.65;
+}
+
+.plink {
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+
+
+/* 6. IMAGE PRESENTATION */
+
+.hero-photo,
+.split-art,
+.help-art,
+.svc-art,
+.about-img {
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.hero-photo img,
+.split-art img,
+.help-art img,
+.svc-art img,
+.about-img img {
+  object-fit: cover;
+}
+
+
+/* 7. MENTOR PROFILE PRESENTATION */
+
+.mentor-grid .prose {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: var(--shadow);
+}
+
+.mentor-grid .prose .body:last-child {
+  margin-bottom: 0;
+}
+
+
+/* 8. CONTACT INFORMATION */
+
+.contact-card {
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.contact-card li + li {
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+}
+
+.contact-card a {
+  overflow-wrap: anywhere;
+}
+
+
+/* 9. HOME PAGE IMAGE CARDS */
+
+.home-service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.home-photo-card {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-card-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--navy);
+}
+
+.home-card-image img {
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.home-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  flex: 1;
+  gap: 10px;
+}
+
+.home-card-body h3 {
+  margin: 0;
+}
+
+.home-card-body p {
+  margin-bottom: 16px;
+}
+
+.home-card-body a {
+  margin-top: auto;
+}
+
+
+/* 10. INFORMATION PANELS */
+
+.design-info-panel {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+
+.design-info-panel > :first-child {
+  margin-top: 0;
+}
+
+.design-info-panel > :last-child {
+  margin-bottom: 0;
+}
+
+
+/* 11. HOVER EFFECTS */
+
+@media (hover: hover) {
+  .path:hover,
+  .help:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+  }
+
+  .home-photo-card:hover .home-card-image img {
+    transform: scale(1.035);
+  }
+}
+
+
+/* 12. TABLET RESPONSIVENESS */
+
+@media (max-width: 1000px) {
+  .pcard {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+
+  .home-service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* 13. MOBILE RESPONSIVENESS */
+
+@media (max-width: 620px) {
+  .pcard {
+    flex-basis: 100%;
+  }
+
+  .home-service-grid,
+  .grid,
+  .grid.three {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .home-card-body,
+  .design-info-panel,
+  .mentor-grid .prose {
+    padding: 20px;
+  }
+
+  .home-card-image {
+    aspect-ratio: 16 / 10;
+  }
+
+  .hero-art .visual-photo {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+
+/* 14. ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .path,
+  .help,
+  .home-card-image img {
+    transition: none;
+  }
+
+  .home-photo-card:hover .home-card-image img {
+    transform: none;
+  }
+}

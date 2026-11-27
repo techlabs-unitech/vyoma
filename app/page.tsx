@@ -6,6 +6,39 @@ import { Icon } from "./Icons";
 
 const audienceIcons = ["building", "cap", "building", "briefcase", "bulb"];
 const serviceIcons = ["handshake", "book", "shield", "rocket", "chart", "users", "building"];
+const serviceVisuals: Record<string, {
+  src: string;
+  position: string;
+}> = {
+  "academic-partnerships": {
+    src: "/images/services/academic-partnerships.jpg",
+    position: "center",
+  },
+  "learning-pathways": {
+    src: "/images/pathways/online-offline.jpg",
+    position: "center",
+  },
+  "ai-cybersecurity": {
+    src: "/images/services/ai-cybersecurity.jpg",
+    position: "center",
+  },
+  "skillpreneur-academy": {
+    src: "/images/services/skillpreneur-academy.jpg",
+    position: "34% center",
+  },
+  "institutional-consulting": {
+    src: "/images/about/mentorship-and-growth.jpg",
+    position: "center",
+  },
+  faculty: {
+    src: "/images/services/faculty-development.jpg",
+    position: "68% center",
+  },
+  "education-investment": {
+    src: "/images/services/education-investment.jpg",
+    position: "center",
+  },
+};
 const audiences = [
   ["Schools and colleges", "Academic partnerships, courses, faculty development, student training and institutional support."],
   ["Students and parents", "Subject support, professional pathways, practical skills, certifications and career development."],
@@ -53,17 +86,90 @@ export default function Home() {
         <div className="grid">{audiences.map(([t, d], i) => <article key={t} className="card"><span className="help-ico"><Icon name={audienceIcons[i]} /></span><h3>{t}</h3><p>{d}</p></article>)}</div>
       </Block>
 
-      <Block title="What we do">
-        <div className="grid">{services.map((s, i) => (
-          <article key={s.id} className={`card ${i === 6 ? "wide" : ""}`}><span className="help-ico"><Icon name={serviceIcons[i]} /></span><h3>{s.title}</h3><p>{s.short}</p><Link href={`/services#${s.id}`}>Learn more</Link></article>
-        ))}</div>
-      </Block>
+      
+<Block title="What we do">
+  <div className="home-service-grid">
+    {services.map((s, i) => (
+      <article
+        key={s.id}
+        className="card home-photo-card"
+      >
+        <div className="home-card-image">
+          <Image
+            src={serviceVisuals[s.id].src}
+            alt=""
+            fill
+            sizes="(max-width: 620px) 100vw, (max-width: 1000px) 50vw, 33vw"
+            style={{
+              objectPosition:
+                serviceVisuals[s.id].position,
+            }}
+          />
+        </div>
 
-      <Block title="Choose your path" alt>
-        <div className="grid three">{journeys.map(([t, d, h, c]) => (
-          <article key={t} className="path"><h3>{t}</h3><p>{d}</p><Link className="btn" href={h}>{c}</Link></article>
-        ))}</div>
-      </Block>
+        <div className="home-card-body">
+          <span className="help-ico">
+            <Icon name={serviceIcons[i]} />
+          </span>
+
+          <h3>{s.title}</h3>
+
+          <p>{s.short}</p>
+
+          <Link href={`/services#${s.id}`}>
+            Learn more
+          </Link>
+        </div>
+      </article>
+    ))}
+  </div>
+
+  <Note>
+    Images are illustrative representations of our
+    proposed services, not photographs of existing
+    Vyoma facilities or programmes.
+  </Note>
+</Block>
+
+
+      
+<Block title="Choose your path" alt>
+  <div className="home-service-grid">
+    {journeys.map(([t, d, h, c], i) => (
+      <article
+        key={t}
+        className="card home-photo-card"
+      >
+        <div className="home-card-image">
+          <Image
+            src={[
+              "/images/pathways/online-offline.jpg",
+              "/images/services/skillpreneur-academy.jpg",
+              "/images/services/academic-partnerships.jpg",
+            ][i]}
+            alt=""
+            fill
+            sizes="(max-width: 620px) 100vw, (max-width: 1000px) 50vw, 33vw"
+            style={{
+              objectPosition:
+                i === 1 ? "34% center" : "center",
+            }}
+          />
+        </div>
+
+        <div className="home-card-body">
+          <h3>{t}</h3>
+          <p>{d}</p>
+
+          <Link className="btn" href={h}>
+            {c}
+          </Link>
+        </div>
+      </article>
+    ))}
+  </div>
+</Block>
+
 
       <Block title="Led by experience" narrow>
         <p className="body">With over 25 years of professional experience spanning teaching, academic leadership, institutional administration, educational development and strategic operations, the founder leads Vyoma’s vision of accessible, practical and lifelong learning.</p>
